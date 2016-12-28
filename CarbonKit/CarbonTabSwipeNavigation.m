@@ -237,6 +237,10 @@
     index += 1;
     if (index < self.carbonSegmentedControl.numberOfSegments) {
         return [self viewControllerAtIndex:index];
+    } else {
+
+        // Hiep edited
+        return [self viewControllerAtIndex:0];
     }
     return nil;
 }
