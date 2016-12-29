@@ -230,7 +230,9 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
         selectedIndex =
         [[self.viewControllers allKeysForObject:currentView].firstObject integerValue];
         [self.carbonSegmentedControl setSelectedSegmentIndex:selectedIndex];
-        [self.carbonSegmentedControl updateIndicatorWithAnimation:NO];
+        // [self.carbonSegmentedControl updateIndicatorWithAnimation:NO];
+        //Hiep edited
+        [self syncIndicator];
         [self callDelegateForCurrentIndex];
     }
     [self callDelegateForFinishingTransition];
